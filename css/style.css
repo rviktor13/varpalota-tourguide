@@ -437,6 +437,7 @@ input.invalid, select.invalid, textarea.invalid {
     text-align: left;
     font-size: 1rem;
     border-radius: 5px;
+    color: var(--text-color);
 }
 
 .answer-btn:hover:not(:disabled) {
@@ -619,4 +620,5 @@ input.invalid, select.invalid, textarea.invalid {
     #print-confirmation p {
         margin-bottom: 0.5rem;
     }
+
 }
