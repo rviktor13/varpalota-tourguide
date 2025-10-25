@@ -439,6 +439,10 @@ input.invalid, select.invalid, textarea.invalid {
     border-radius: 5px;
     color: var(--text-color);
 }
+.answer-btn a {
+    color: inherit; 
+    text-decoration: none; 
+}
 
 .answer-btn:hover:not(:disabled) {
     background: var(--accent-color);
@@ -622,3 +626,4 @@ input.invalid, select.invalid, textarea.invalid {
     }
 
 }
+
