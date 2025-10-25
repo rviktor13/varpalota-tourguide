@@ -1,0 +1,40 @@
+Készítette: Rémai Viktor (L51FA5)
+
+
+Ez a weboldal egy "Várpalota Tourguide" portál, amely bemutatja a város és környéke főbb nevezetességeit, történelmét és hasznos turisztikai információkat nyújt. Célja, hogy a látogatók számára interaktív és reszponzív felületen keresztül tegye felfedezhetővé Várpalota értékeit. Az oldal tartalmaz egy 7 napos időjárás előrejelzést, Várpalota látványosságainak felsorolását, egy túrafoglaló űrlapot és egy városismereti kvízt.
+
+A projekt három fő JavaScript fájlt használ, amik a /js/ mappában találhatóak
+1. js/main.js: Ez a szkript felel a reszponzív navigációs (hamburger) menü működtetéséért (az 'active' class kapcsolgatásával) az összes oldalon. Emellett ez a fájl kezeli a foglalas.html oldalon található űrlap teljes kliensoldali validációját. Figyeli a 'submit' eseményt, 6 mezőt ellenőriz (név, e-mail, dátum, túra típus, felnőtt létszám, checkbox), és hiba esetén üzeneteket jelenít meg. Sikeres validálás után elrejti az űrlapot, megjelenít egy sikeres üzenetet, legenerálja a nyomtatási nézetet (@media print segítségével), és kezeli a "Visszaigazolás mentése" (window.print()) és "Új foglalás" gombok eseményeit.
+
+2. js/kviz.js: A kviz.html oldalon fut. A szkript egy kérdéseket tartalmazó tömbből megjeleníti a kérdéseket és a válaszokat, ellenőrzi a felhasználó választását (zöld/piros visszajelzéssel), számolja a pontszámot, majd a végén kiírja az elért eredményt.
+
+3. js/idojaras.js: Ez a szkript az idojaras.html oldalon fut. A natív fetch() API segítségével lekéri a 7 napos időjárás-előrejelzést az Open-Meteo API-ról Várpalota koordinátáira. A kapott JSON választ feldolgozza, és dinamikusan HTML kártyákat generál a hét napjaira, leképezve az időjáráskódokat a "Weather Icons" ikonjaira és magyar nyelvű leírásokra.
+
+A weboldal a Google Fonts által biztosított 'Montserrat' betűtípust használja (400-as és 700-as súllyal). A betűtípus a css/style.css fájl legelején van importálva az @import szabály segítségével. (https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap)
+
+Minden felhasznált külső forrás megjelölése:
+- Google Fonts (https://fonts.google.com/): A 'Montserrat' betűtípus biztosításához.
+- Open-Meteo API (https://open-meteo.com/): A 7 napos időjárás-előrejelzés adatainak lekéréséhez.
+- Weather Icons (https://erikflowers.github.io/weather-icons/): Az időjárás-előrejelzés ikonjainak megjelenítéséhez (cdnjs.cloudflare.com CDN-ről behívva).
+- Google Maps (https://maps.google.com/): Az iframe-be ágyazott térkép a főoldalon.
+- A szövegek írásához és fogalmazásához, valamint az ötlet kitalálásához Google Gemini AI-t használtam.
+
+Képek forrása:
+https://csodalatosmagyarorszag.hu/latnivalok/varak-kastelyok/nadasdy-kastely-nadasdladany
+https://csodalatosmagyarorszag.hu/hirek/itthon/zugo-vizzuhatag-a-bakonyi-szurdokban-a-romai-furdo-vizeses-bakonynanan
+https://csodalatosmagyarorszag.hu/hirek/itthon/regi-idok-hirmondoi-a-tesi-szelmalmok
+https://hu.wikipedia.org/wiki/Ösküi_kerektemplom
+https://kirandulastervezo.hu/latnivalo/varpalota/romai-kori-halomsirok
+https://miserend.hu/templom/5141
+https://miserend.hu/templom/2215
+https://www.verga.hu/index.php/kilatok-maderspach-viktor
+https://welovebalaton.hu/cikk/2023/04/02/latnivalok-kultura-inotai-hoeromu-beke-muvelodesi-haz
+https://www.utazzitthon.hu/latnivalo/varpalota/jo-szerencset-muvelodesi-kozpont-2077
+https://hu.wikipedia.org/wiki/Fájl:Nagy_gyula_galéria_várpalota.jpg
+https://varpalota.kornyeke.hu/varpalotai-homokbanya
+https://welovebalaton.hu/hely/inotai-hoeromu
+https://www.tanyamuzeum.hu/magyar/oldalak/fodor_sara_tajhaz
+https://csodalatosmagyarorszag.hu/latnivalok/muzeumok/magyar-vegyeszeti-muzeum-varpalota
+https://csodalatosmagyarorszag.hu/latnivalok/varak-kastelyok/pusztapalota-batorko-vara
+https://programlehetosegek.hu/p/trianon-muzeum
+https://www.orszagjaro.net/thury-var

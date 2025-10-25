@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helyismereti Kvíz - Várpalota Tourguide</title>
+    <meta name="description" content="Teszteld a tudásod! Mennyire ismered Várpalotát? Interaktív helyismereti kvíz.">
+    <meta name="author" content="Rémai Viktor">
+    <link rel="icon" href="images/favico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Várpalota Guide</a>
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="latnivalok.html">Látnivalók</a></li>
+                <li><a href="tortenet.html">Történelem</a></li>
+                <li><a href="idojaras.html">Időjárás</a></li>
+                <li><a href="kviz.html" class="active">Kvíz</a></li>
+                <li><a href="foglalas.html">Foglalás</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="kviz-container">
+            <h2>Helyismereti Kvíz</h2>
+            
+            <div id="kviz">
+                <h3 id="question-text">Kérdés szövege ide</h3>
+                <div id="answer-buttons">
+                    </div>
+                <button id="next-btn" class="btn">Következő</button>
+            </div>
+            
+            <div id="result-container" style="display: none;">
+                <h2>Eredmény</h2>
+                <p id="result-text">X kérdésből Y pontot értél el!</p>
+                <button id="restart-btn" class="btn">Újrapróbálkozás</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Várpalota Tourguide - Készítette: Rémai Viktor</p>
+    </footer>
+
+    <script src="js/kviz.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Időjárás - Várpalota Tourguide</title>
+    <meta name="description" content="Aktuális időjárás-előrejelzés Várpalotán. Tervezze meg utazását!">
+    <meta name="author" content="Rémai Viktor">
+    <link rel="icon" href="images/favico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Várpalota Guide</a>
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="latnivalok.html">Látnivalók</a></li>
+                <li><a href="tortenet.html">Történelem</a></li>
+                <li><a href="idojaras.html" class="active">Időjárás</a></li>
+                <li><a href="kviz.html">Kvíz</a></li>
+                <li><a href="foglalas.html">Foglalás</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>7 napos előrejelzés Várpalotán</h2>
+        <p>Tervezze meg a hetét a várható időjárás alapján.</p>
+
+        <section class="forecast-container">
+            <div id="weather-loading">Adatok töltése...</div>
+            <p id="weather-error" style="color: red; display: none;"></p>
+            
+            <div id="forecast-grid">
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Várpalota Tourguide - Készítette: Rémai Viktor</p>
+    </footer>
+
+    <script src="js/idojaras.js"></script>
+    <script src="js/main.js"></script> 
+</body>
+</html>

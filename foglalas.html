@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Túra Foglalás - Várpalota Tourguide</title>
+    <meta name="description" content="Foglaljon vezetett városnéző túrát Várpalotán. Töltse ki űrlapunkat!">
+    <meta name="author" content="Rémai Viktor">
+    <link rel="icon" href="images/favico.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Várpalota Guide</a>
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="latnivalok.html">Látnivalók</a></li>
+                <li><a href="tortenet.html">Történelem</a></li>
+                <li><a href="idojaras.html">Időjárás</a></li>
+                <li><a href="kviz.html">Kvíz</a></li>
+                <li><a href="foglalas.html" class="active">Foglalás</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-container">
+            <h2>Túra Foglalás</h2>
+            <p>Szeretné szakértő vezetéssel felfedezni a várost? Töltse ki az alábbi űrlapot!</p>
+
+            <form id="foglalas-form" novalidate>
+                <div class="form-group">
+                    <label for="nev">Teljes Név</label>
+                    <input type="text" id="nev" name="nev">
+                    <div class="error-message" id="nev-error">A név kitöltése kötelező.</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail cím</label>
+                    <input type="email" id="email" name="email">
+                    <div class="error-message" id="email-error">Érvénytelen e-mail cím.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefon">Telefonszám (opcionális)</label>
+                    <input type="tel" id="telefon" name="telefon" placeholder="+36 30 123 4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="datum">Túra Dátuma</label>
+                    <input type="date" id="datum" name="datum">
+                    <div class="error-message" id="datum-error">A dátum nem lehet múltbeli.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tura-tipus">Választott túra</label>
+                    <select id="tura-tipus" name="tura-tipus">
+                        <option value="">-- Kérjük válasszon --</option>
+                        <option value="varosnezes">Általános városnézés (2 óra)</option>
+                        <option value="muzeumtura">Múzeumtúra (3 óra)</option>
+                        <option value="bakonyi-seta">Bakonyi séta (4 óra)</option>
+                    </select>
+                    <div class="error-message" id="tura-error">Kérjük, válasszon túra típust.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="felnott">Felnőttek száma</label>
+                    <input type="number" id="felnott" name="felnott" min="1" value="1">
+                    <div class="error-message" id="felnott-error">Legalább 1 felnőtt részvétele szükséges.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="gyerek">Gyerekek száma (opcionális)</label>
+                    <input type="number" id="gyerek" name="gyerek" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label>Fizetési mód</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="fizetes" value="helyszin" checked> Helyszínen készpénzben</label>
+                        <label><input type="radio" name="fizetes" value="utalas"> Előre utalás (e-mailben)</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="megjegyzes">Megjegyzés (pl. ételérzékenység)</label>
+                    <textarea id="megjegyzes" name="megjegyzes" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="adatkezeles" name="adatkezeles">
+                        Elfogadom az adatkezelési feltételeket.
+                    </label>
+                    <div class="error-message" id="adatkezeles-error">A foglaláshoz el kell fogadni a feltételeket.</div>
+                </div>
+
+                <button type="submit" class="btn">Foglalás elküldése</button>
+            </form>
+            <div id="success-message" style="display: none;">
+                <h3>Sikeres foglalás!</h3>
+                <p>Köszönjük, hogy minket választott! A foglalását rögzítettük.</p>
+                <p>A visszaigazolást lementheti PDF-ként, vagy új foglalást is indíthat.</p>
+                
+                <div class="success-buttons">
+                    <button id="save-pdf-btn" class="btn">Visszaigazolás mentése (PDF)</button>
+                    <button id="new-booking-btn" class="btn btn-secondary">Új foglalás</button>
+                </div>
+            </div>
+        </section>
+        <section id="print-confirmation">
+            <!-- Nyomtatás adatai -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Várpalota Tourguide - Készítette: Rémai Viktor</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
