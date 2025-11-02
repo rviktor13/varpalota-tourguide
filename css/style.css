@@ -488,7 +488,7 @@ input.invalid, select.invalid, textarea.invalid {
 
 /* --- Reszponzivitás (Media Queries) --- */
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
     .success-buttons {
         flex-direction: row;
         justify-content: center;
@@ -498,7 +498,7 @@ input.invalid, select.invalid, textarea.invalid {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
     h1 { font-size: 2.5rem; }
     .hero h1 { font-size: 2.8rem; }
     
@@ -626,4 +626,5 @@ input.invalid, select.invalid, textarea.invalid {
     }
 
 }
+
 
