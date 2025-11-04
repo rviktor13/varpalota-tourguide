@@ -127,7 +127,7 @@ img {
 /* --- Footer --- */
 footer {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1.2rem 1rem;
     background: var(--text-color);
     color: var(--bg-color);
     margin-top: 2rem;
@@ -626,5 +626,6 @@ input.invalid, select.invalid, textarea.invalid {
     }
 
 }
+
 
 
